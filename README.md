@@ -5,12 +5,13 @@ This Redmine[http://www.redmine.org] plugin makes file attachments be stored on 
 
 ## Installation
 1. Make sure Redmine is installed and cd into it's root directory
-2. `git clone git://github.com/ka8725/redmine_s3.git plugins/redmine_s3`
+2. `git clone git@github.com:krishnasrihari/redmine_s3.git plugins/redmine_s3`
 3. `cp plugins/redmine_s3/config/s3.yml.example config/s3.yml`
 4. Edit config/s3.yml with your favourite editor
-5. Restart mongrel/upload to production/whatever
-6. *Optional*: Run `rake redmine_s3:files_to_s3` to upload files in your files folder to s3
-7. `rm -Rf plugins/redmine_s3/.git` 
+5. Add gem 'aws-sdk' in Gemfile
+6. Restart mongrel/upload to production/whatever
+7. *Optional*: Run `rake redmine_s3:files_to_s3` to upload files in your files folder to s3
+8. `rm -Rf plugins/redmine_s3/.git` 
 
 ## Options Overview
 * The bucket specified in s3.yml will be created automatically when the plugin is loaded (this is generally when the server starts).
